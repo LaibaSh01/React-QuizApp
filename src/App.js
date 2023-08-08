@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Main from "./components/Main";
+import StartScreen from "./components/StartScreen";
 
 function App() {
+  const [quizStarted, setQuizStarted] = useState(false);
+  const [quizCompleted, setQuizCompleted] = useState(false);
+
+  const handleStartQuiz = () => {
+    setQuizStarted(true);
+  };
+
+  const handleQuizCompleted = () => {
+    setQuizCompleted(true);
+  };
+
+  const handleRetryQuiz = () => {
+    setQuizStarted(false);
+    setQuizCompleted(false);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {!quizStarted && !quizCompleted ? (
+        <StartScreen onStartQuiz={handleStartQuiz} />
+      ) : quizStarted && !quizCompleted ? (
+        <Main onQuizCompleted={handleQuizCompleted} />
+      ) : (
+        <StartScreen onStartQuiz={handleRetryQuiz} />
+      )}
     </div>
   );
 }
