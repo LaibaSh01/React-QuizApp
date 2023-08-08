@@ -65,7 +65,7 @@ body {
 
 .display_question {
   text-align: left;
-  font-size: 10px;
+  font-size: 28px;
   margin-left: 30px;
   margin-right: 60px;
   line-height: 2rem;
@@ -165,13 +165,13 @@ li {
   margin-bottom: 10px;
 }
 
-.MuiRating-iconFilled {
+/* .MuiRating-iconFilled {
   color: #fca120;
 }
 
 .MuiRating-iconEmpty {
   color: #c5c5c5;
-}
+} */
 
 .answer-text.correct {
   color: #00a800; /* Green color for correct answer text */

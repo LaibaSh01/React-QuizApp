@@ -80,7 +80,6 @@ const Main = () => {
       setCurrentQuestion(null);
     }
   };
-
   const progress =
     currentQuestion !== null
       ? ((currentQuestion + 1) / questions.length) * 100
