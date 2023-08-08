@@ -180,3 +180,79 @@ li {
 .answer-text.incorrect {
   color: #ff0000; /* Red color for incorrect answer text */
 }
+@media (max-width: 768px) {
+  /* Styles for screens with a maximum width of 768px */
+  .main-card {
+    width: 90%;
+  }
+
+  .category,
+  .current_questionNo,
+  .display_question,
+  ul {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  ul {
+    column-gap: 2rem;
+  }
+
+  li {
+    flex: 0 0 100%;
+  }
+
+  .question-timer-container {
+    margin-right: 10px;
+  }
+
+  .icon {
+    top: 12%;
+  }
+}
+
+@media (max-height: 600px) {
+  .main-card {
+    height: auto;
+    padding: 20px; 
+  }
+
+  .current_score {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .display_question {
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  ul {
+    column-gap: 1rem;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  li {
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  .question-timer-container {
+    margin-right: 10px;
+  }
+
+  .icon {
+    top: 15%;
+  }
+
+  .answer-text {
+    font-size: 24px;
+    margin-top: 25px;
+  }
+}
+
+
+

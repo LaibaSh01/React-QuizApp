@@ -147,8 +147,8 @@ const Main = () => {
         </ul>
       </div>
       {/* Next Question button */}
-      <div>
-        {userAnswer && (
+      {userAnswer && (
+        <div>
           <p
             className={`answer-text ${
               userAnswer === "Correct!" ? "correct" : "incorrect"
@@ -156,11 +156,11 @@ const Main = () => {
           >
             {userAnswer}
           </p>
-        )}
-        <button className="button" onClick={handleNextQuestion}>
-          Next Question
-        </button>
-      </div>
+          <button className="button" onClick={handleNextQuestion}>
+            Next Question
+          </button>
+        </div>
+      )}
             <div className="container">
               <div className="d-flex justify-content-between">
                 <div>Score{" "} {((answer?.correct / (currentQuestion + 1)) * 100).toFixed(0)} %
